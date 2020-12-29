@@ -1,8 +1,8 @@
-# @codemirror/matchbrackets
+# @codemirror/matchbrackets [![NPM version](https://img.shields.io/npm/v/@codemirror/matchbrackets.svg)](https://www.npmjs.org/package/@codemirror/matchbrackets)
 
-[ [![NPM version](https://img.shields.io/npm/v/@codemirror/next.svg)](https://www.npmjs.org/package/@codemirror/matchbrackets) | [**WEBSITE**](https://codemirror.net/6/) | [**DOCS**](https://codemirror.net/6/docs/ref/#matchbrackets) | [**ISSUES**](https://github.com/codemirror/codemirror.next/issues) | [**FORUM**](https://discuss.codemirror.net/c/next/) | [**CHANGELOG**](https://github.com/codemirror/matchbrackets/blob/main/CHANGELOG.md) ]
+[ [**WEBSITE**](https://codemirror.net/6/) | [**DOCS**](https://codemirror.net/6/docs/ref/#matchbrackets) | [**ISSUES**](https://github.com/codemirror/codemirror.next/issues) | [**FORUM**](https://discuss.codemirror.net/c/next/) | [**CHANGELOG**](https://github.com/codemirror/matchbrackets/blob/main/CHANGELOG.md) ]
 
-This package implements Bracket matching for the
+This package implements bracket matching for the
 [CodeMirror](https://codemirror.net/6/) code editor.
 
 The [project page](https://codemirror.net/6/) has more information, a
