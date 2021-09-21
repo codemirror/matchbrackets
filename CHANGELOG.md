@@ -1,3 +1,11 @@
+## 0.19.2 (2021-09-21)
+
+### Bug fixes
+
+Properly match tokens even if they are not the immediate inner syntax node around the given position (for example XML tags).
+
+Make the default matching bracket styles use a background color, to be less invasive.
+
 ## 0.19.1 (2021-08-11)
 
 ### Bug fixes
