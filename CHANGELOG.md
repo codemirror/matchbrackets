@@ -1,3 +1,9 @@
+## 0.19.3 (2021-09-28)
+
+### Bug fixes
+
+Fix an issue where, for some kinds of trees, the extension would crash on an attempt to create an empty decoration.
+
 ## 0.19.2 (2021-09-21)
 
 ### Bug fixes
