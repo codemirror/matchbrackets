@@ -1,3 +1,9 @@
+## 0.19.4 (2022-02-09)
+
+### Bug fixes
+
+The matching bracket styles no longer show up when the editor isn't focused.
+
 ## 0.19.3 (2021-09-28)
 
 ### Bug fixes

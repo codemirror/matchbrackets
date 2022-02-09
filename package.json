@@ -1,6 +1,6 @@
 {
   "name": "@codemirror/matchbrackets",
-  "version": "0.19.3",
+  "version": "0.19.4",
   "description": "Bracket matching for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
