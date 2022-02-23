@@ -15,6 +15,8 @@ export interface Config {
   /// information](https://lezer.codemirror.net/docs/ref/#common.NodeProp^closedBy)
   /// in the syntax tree.
   brackets?: string,
+  /// Whether adjacent matching brackets should be combined into a single decoration
+  combineAdjacent?: boolean
   /// The maximum distance to scan for matching brackets. This is only
   /// relevant for brackets not encoded in the syntax tree. Defaults
   /// to 10 000.
@@ -33,6 +35,7 @@ const bracketMatchingConfig = Facet.define<Config, Required<Config>>({
     return combineConfig(configs, {
       afterCursor: true,
       brackets: DefaultBrackets,
+      combineAdjacent: false,
       maxScanDistance: DefaultScanDist
     })
   }
@@ -56,8 +59,12 @@ const bracketMatchingState = StateField.define<DecorationSet>({
              (range.head < tr.state.doc.length && matchBrackets(tr.state, range.head + 1, -1, config))))
       if (!match) continue
       let mark = match.matched ? matchingMark : nonmatchingMark
-      decorations.push(mark.range(match.start.from, match.start.to))
-      if (match.end) decorations.push(mark.range(match.end.from, match.end.to))
+      if (config.combineAdjacent && match.end && (match.start.to === match.end.from || match.end.to === match.start.from)) {
+        decorations.push(mark.range(Math.min(match.start.from, match.end.from), Math.max(match.start.to, match.end.to)))
+      } else {
+        decorations.push(mark.range(match.start.from, match.start.to))
+        if (match.end) decorations.push(mark.range(match.end.from, match.end.to))
+      }
     }
     return Decoration.set(decorations, true)
   },
